@@ -17,16 +17,16 @@ GATEWAY_URL = f'{GATEWAY_IP}:7000'
 
 FUNCTIONS_INFO_PATH = '../../benchmark'
 WORKFLOWS_INFO_PATH = {
-                       'video': os.path.expanduser('~/FaaSFlow_ASPLOS24/benchmark/video'),
-                       'wordcount': os.path.expanduser('~/FaaSFlow_ASPLOS24/benchmark/wordcount'),
-                       'recognizer': os.path.expanduser('~/FaaSFlow_ASPLOS24/benchmark/recognizer'),
-                       'svd': os.path.expanduser('~/FaaSFlow_ASPLOS24/benchmark/svd')}
-if os.path.exists('/state/partition2/FaaSFlow_ASPLOS24'):
-    PREFETCH_POOL_PATH = '/state/partition2/FaaSFlow_ASPLOS24/prefetch_pool'
-    FILE_CONTROLLER_PATH = '/state/partition2/FaaSFlow_ASPLOS24/file_controller'
+                       'video': os.path.expanduser('~/FaaSFlow/benchmark/video'),
+                       'wordcount': os.path.expanduser('~/FaaSFlow/benchmark/wordcount'),
+                       'recognizer': os.path.expanduser('~/FaaSFlow/benchmark/recognizer'),
+                       'svd': os.path.expanduser('~/FaaSFlow/benchmark/svd')}
+if os.path.exists('/state/partition2/FaaSFlow'):
+    PREFETCH_POOL_PATH = '/state/partition2/FaaSFlow/prefetch_pool'
+    FILE_CONTROLLER_PATH = '/state/partition2/FaaSFlow/file_controller'
 else:
-    PREFETCH_POOL_PATH = os.path.expanduser('~/FaaSFlow_ASPLOS24/prefetch_pool')
-    FILE_CONTROLLER_PATH = os.path.expanduser('~/FaaSFlow_ASPLOS24/file_controller')
+    PREFETCH_POOL_PATH = os.path.expanduser('~/FaaSFlow/prefetch_pool')
+    FILE_CONTROLLER_PATH = os.path.expanduser('~/FaaSFlow/file_controller')
 CHUNK_SIZE = 1 * 1024 * 1024
 
 DOCKER_CPU_QUOTA = 100000
