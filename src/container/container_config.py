@@ -1,4 +1,4 @@
-COUCHDB_URL = 'http://openwhisk:openwhisk@35.78.181.222:5984/'
+COUCHDB_URL = 'http://openwhisk:openwhisk@172.31.15.186:5984/'
 KAFKA_URL = '35.78.181.222:9092'
 KAFKA_CHUNK_SIZE = 256 * 1024
 KAFKA_NUM_PARTITIONS = 8
