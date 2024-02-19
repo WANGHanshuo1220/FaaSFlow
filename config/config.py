@@ -16,17 +16,18 @@ PREFETCHER_URL = 'http://127.0.0.1:8002/{}'
 GATEWAY_URL = f'{GATEWAY_IP}:7000'
 
 FUNCTIONS_INFO_PATH = '../../benchmark'
+os.environ["HOME"] = '/home/ubuntu'
 WORKFLOWS_INFO_PATH = {
-                       'video': os.path.abspath('~/FaaSFlow/benchmark/video'),
-                       'wordcount': os.path.abspath('~/FaaSFlow/benchmark/wordcount'),
-                       'recognizer': os.path.abspath('~/FaaSFlow/benchmark/recognizer'),
-                       'svd': os.path.abspath('~/FaaSFlow/benchmark/svd')}
+                       'video': os.path.expanduser('~/FaaSFlow/benchmark/video'),
+                       'wordcount': os.path.expanduser('~/FaaSFlow/benchmark/wordcount'),
+                       'recognizer': os.path.expanduser('~/FaaSFlow/benchmark/recognizer'),
+                       'svd': os.path.expanduser('~/FaaSFlow/benchmark/svd')}
 if os.path.exists('/state/partition2/FaaSFlow'):
     PREFETCH_POOL_PATH = '/state/partition2/FaaSFlow/prefetch_pool'
     FILE_CONTROLLER_PATH = '/state/partition2/FaaSFlow/file_controller'
 else:
-    PREFETCH_POOL_PATH = os.path.abspath('~/FaaSFlow/prefetch_pool')
-    FILE_CONTROLLER_PATH = os.path.abspath('~/FaaSFlow/file_controller')
+    PREFETCH_POOL_PATH = os.path.expanduser('~/FaaSFlow/prefetch_pool')
+    FILE_CONTROLLER_PATH = os.path.expanduser('~/FaaSFlow/file_controller')
 CHUNK_SIZE = 1 * 1024 * 1024
 
 DOCKER_CPU_QUOTA = 100000
