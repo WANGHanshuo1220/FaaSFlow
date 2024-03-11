@@ -1,10 +1,10 @@
 # In template, functions are across different workflows.
 import os.path
 
-KAFKA_IP = '172.31.12.227'
-GATEWAY_IP = '172.31.6.144'
-COUCHDB_IP = '172.31.12.227'
-WORKER_ADDRS = ['172.31.0.147', '172.31.4.4', '172.31.6.75']
+KAFKA_IP = '172.31.3.10'
+GATEWAY_IP = '172.31.10.85'
+COUCHDB_IP = '172.31.3.10'
+WORKER_ADDRS = ['172.31.41.77', '172.31.34.103', '172.31.38.115']
 
 COUCHDB_URL = f'http://openwhisk:openwhisk@{COUCHDB_IP}:5984/'
 REDIS_HOST = '127.0.0.1'
